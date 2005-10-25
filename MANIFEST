@@ -1,0 +1,12 @@
+Changes
+lib/Text/Normalize/NACO.pm
+Makefile.PL
+MANIFEST
+README
+t/01-use.t
+t/10-normalize.t
+t/11-normalize_suite.t
+t/98-pod_coverage.t
+t/99-pod.t
+t/titles.dat
+t/titles2.dat
