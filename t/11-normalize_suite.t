@@ -10,16 +10,16 @@ BEGIN {
 my $naco = Text::Normalize::NACO->new( case => 'lower' );
 isa_ok( $naco, 'Text::Normalize::NACO' );
 
-for my $file ( <t/*.dat> ) {
-	open( FILE, $file );
+for my $file ( glob( 't/*.dat' ) ) {
+	open( my $text, $file ) or die $!;
 
-	while( <FILE> ) {
+	while( <$text> ) {
 		s/[\r\n]//g;
 		my( $original, $normalized ) = split( /\t/, $_ );
 		is( $naco->normalize( $original ), $normalized, "\$naco->normalize( '$original' )" );
 	}
 
-	close( FILE );
+	close( $text ) or die $!;
 }
 
 

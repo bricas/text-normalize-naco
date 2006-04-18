@@ -1,8 +1,8 @@
+Build.PL
 Changes
 lib/Text/Normalize/NACO.pm
-Makefile.PL
 MANIFEST
-README
+META.yml
 t/01-use.t
 t/10-normalize.t
 t/11-normalize_suite.t

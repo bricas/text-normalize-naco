@@ -1,5 +1,9 @@
 Revision history for Perl extension Text::Normalize::NACO
 
+0.1   Tue Apr 18 2006
+	- use Text::Unidecode to remove diacritical marks
+	- switch to Module::Build
+
 0.05  Thu Mar 03 12:46:20 2005
 	- added pod_coverage test
 
