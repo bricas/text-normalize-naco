@@ -1,5 +1,9 @@
 Revision history for Perl extension Text::Normalize::NACO
 
+0.11  Tue Aug 21 2007
+    - switch to Module::Install
+    - specify perl 5.8.0 as prereq due to unicode requirements
+
 0.1   Tue Apr 18 2006
 	- use Text::Unidecode to remove diacritical marks
 	- switch to Module::Build

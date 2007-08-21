@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 BEGIN {
-	use_ok( 'Text::Normalize::NACO' );
+    use_ok( 'Text::Normalize::NACO' );
 }
 
 Text::Normalize::NACO->import( 'naco_normalize' );
