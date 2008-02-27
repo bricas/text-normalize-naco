@@ -44,7 +44,7 @@ use warnings;
 
 use Text::Unidecode;
 
-our $VERSION = '0.11';
+our $VERSION = '0.12';
 
 our @EXPORT_OK = qw( naco_normalize );
 
@@ -84,7 +84,7 @@ Accessor/Mutator for the case in which the string should be returned.
 
 sub case {
     my $self = shift;
-    my( $case ) = @_;
+    my ( $case ) = @_;
 
     $self->{ _CASE } = $case if @_;
 
@@ -107,7 +107,7 @@ sub naco_normalize {
 
     my $normalized = normalize( undef, $text );
 
-    if( $case eq 'lower' ) {
+    if ( $case eq 'lower' ) {
         $normalized =~ tr/A-Z/a-z/;
     }
     else {
@@ -126,15 +126,15 @@ Normalizes $text and returns the new string.
 =cut
 
 sub normalize {
-    my $self  = shift;
-    my $data  = shift;
+    my $self = shift;
+    my $data = shift;
 
     # Rules taken from NACO Normalization
     # http://lcweb.loc.gov/catdir/pcc/naco/normrule.html
 
     # Remove diacritical marks and convert special chars
     unidecode( $data );
-    
+
     # Convert special chars to spaces
     $data =~ s/[\Q!(){}<>-;:.?,\/\\@*%=\$^_~\E]/ /g;
 
@@ -142,8 +142,8 @@ sub normalize {
     $data =~ s/[\Q'[]|\E]//g;
 
     # Convert lowercase to uppercase or vice-versa.
-    if( $self ) {
-        if( $self->case eq 'lower' ) {
+    if ( $self ) {
+        if ( $self->case eq 'lower' ) {
             $data =~ tr/A-Z/a-z/;
         }
         else {
@@ -174,7 +174,7 @@ Brian Cassidy E<lt>bricas@cpan.orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2007 by Brian Cassidy
+Copyright 2008 by Brian Cassidy
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself. 

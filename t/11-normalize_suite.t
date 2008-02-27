@@ -13,13 +13,13 @@ isa_ok( $naco, 'Text::Normalize::NACO' );
 for my $file ( glob( 't/*.dat' ) ) {
     open( my $text, $file ) or die $!;
 
-    while( <$text> ) {
+    while ( <$text> ) {
         s/[\r\n]//g;
-        my( $original, $normalized ) = split( /\t/, $_ );
-        is( $naco->normalize( $original ), $normalized, "\$naco->normalize( '$original' )" );
+        my ( $original, $normalized ) = split( /\t/, $_ );
+        is( $naco->normalize( $original ),
+            $normalized, "\$naco->normalize( '$original' )" );
     }
 
     close( $text ) or die $!;
 }
-
 
