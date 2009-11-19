@@ -44,7 +44,7 @@ use warnings;
 
 use Text::Unidecode;
 
-our $VERSION = '0.12';
+our $VERSION = '0.13';
 
 our @EXPORT_OK = qw( naco_normalize );
 
@@ -174,7 +174,7 @@ Brian Cassidy E<lt>bricas@cpan.orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2008 by Brian Cassidy
+Copyright 2004-2009 by Brian Cassidy
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself. 

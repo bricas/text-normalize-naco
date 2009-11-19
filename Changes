@@ -1,5 +1,8 @@
 Revision history for Perl extension Text::Normalize::NACO
 
+0.13  Thu Nov 19 2009
+    - repackaged with a new version of Module::Install
+
 0.12  Wed Feb 27 2008
     - Module::Install upgrade
 

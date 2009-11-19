@@ -1,4 +1,4 @@
-use inc::Module::Install 0.68;
+use inc::Module::Install 0.91;
 
 if ( -e 'MANIFEST.SKIP' ) {
     system( 'pod2text lib/Text/Normalize/NACO.pm > README' );
@@ -13,5 +13,6 @@ requires 'Text::Unidecode';
 
 test_requires 'Test::More';
 
-auto_install;
+repository "http://github.com/bricas/text-normalize-naco/tree/master";
+
 WriteAll;
